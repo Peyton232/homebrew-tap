@@ -5,20 +5,20 @@
 class Speedway < Formula
   desc ""
   homepage ""
-  version "1.0.3-beta.2"
+  version "1.0.3-beta.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sonr-io/speedway/releases/download/v1.0.3-beta.2/speedway_1.0.3-beta.2_darwin_amd64.tar.gz"
-      sha256 "627deaf1a8d18acc1fa91b693db2cf75811d87c10a6c9e8ed0bb3d65824eb3e7"
+      url "https://github.com/sonr-io/speedway/releases/download/v1.0.3-beta.3/speedway_1.0.3-beta.3_darwin_amd64.tar.gz"
+      sha256 "6024bd6336466e7a7f6e7a1efb6b39bc52da975bcd1ff12bb3e2c3c3fbe8e39e"
 
       def install
         bin.install "speedway"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sonr-io/speedway/releases/download/v1.0.3-beta.2/speedway_1.0.3-beta.2_darwin_arm64.tar.gz"
-      sha256 "b37863c8b60201a6f2114dd4fb839079496cd55deb26d5dc00fc1d8a9cebd3f3"
+      url "https://github.com/sonr-io/speedway/releases/download/v1.0.3-beta.3/speedway_1.0.3-beta.3_darwin_arm64.tar.gz"
+      sha256 "cffc18821c0452ee9a8baa8db475e7785ee91af1dc0b88460f3131f799efb8a9"
 
       def install
         bin.install "speedway"
@@ -28,16 +28,16 @@ class Speedway < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sonr-io/speedway/releases/download/v1.0.3-beta.2/speedway_1.0.3-beta.2_linux_arm64.tar.gz"
-      sha256 "d9834fd77442d8cc922b83a36339a393c06106a0667ade60541d0b4526808776"
+      url "https://github.com/sonr-io/speedway/releases/download/v1.0.3-beta.3/speedway_1.0.3-beta.3_linux_arm64.tar.gz"
+      sha256 "af61b1a06b7f652f7be65f2797a11c92f453ea8527deca26040208c1f3d5818a"
 
       def install
         bin.install "speedway"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sonr-io/speedway/releases/download/v1.0.3-beta.2/speedway_1.0.3-beta.2_linux_amd64.tar.gz"
-      sha256 "5ab09bd12e779993957f49bb2669a1808ea8e47db5e30ee27f88de5767fa54f3"
+      url "https://github.com/sonr-io/speedway/releases/download/v1.0.3-beta.3/speedway_1.0.3-beta.3_linux_amd64.tar.gz"
+      sha256 "7dcc20525d48c3529c9fac393ffefe1f6f6e6a5c2c947c82d672a7b355ed8edf"
 
       def install
         bin.install "speedway"
