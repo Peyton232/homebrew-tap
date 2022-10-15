@@ -5,20 +5,20 @@
 class Speedway < Formula
   desc ""
   homepage ""
-  version "1.0.3-beta.1"
+  version "1.1.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sonr-io/speedway/releases/download/v1.0.3-beta.1/speedway_1.0.3-beta.1_darwin_arm64.tar.gz"
-      sha256 "55f62aa330f4ae12eb63032a4f2c527d21082e226aabb7f7cbfa84026234f268"
+    if Hardware::CPU.intel?
+      url "https://github.com/sonr-io/speedway/releases/download/v1.1.2/speedway_1.1.2_darwin_amd64.tar.gz"
+      sha256 "0cb3f54e33406efd5030043a0756bb157c4fc1d1e660aba03e4f48f7424bbfdd"
 
       def install
         bin.install "speedway"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sonr-io/speedway/releases/download/v1.0.3-beta.1/speedway_1.0.3-beta.1_darwin_amd64.tar.gz"
-      sha256 "940cb9399a8f11d1e63b6cc55b772d6cd7490e85c98caf2a30f90aee1d888c8a"
+    if Hardware::CPU.arm?
+      url "https://github.com/sonr-io/speedway/releases/download/v1.1.2/speedway_1.1.2_darwin_arm64.tar.gz"
+      sha256 "a25c3877d23419eb7b0674cc109458a8bb7318cc6c3c8886cef548864822b4b9"
 
       def install
         bin.install "speedway"
@@ -27,17 +27,17 @@ class Speedway < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sonr-io/speedway/releases/download/v1.0.3-beta.1/speedway_1.0.3-beta.1_linux_arm64.tar.gz"
-      sha256 "c9830d56ac06f61670162e50f8365e688122767b6bbf93892529e7a3fd97e928"
+    if Hardware::CPU.intel?
+      url "https://github.com/sonr-io/speedway/releases/download/v1.1.2/speedway_1.1.2_linux_amd64.tar.gz"
+      sha256 "998e11e508cb55d12b6733f6cc09defac2acc37b5f82f6e80a18b1798231ded1"
 
       def install
         bin.install "speedway"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sonr-io/speedway/releases/download/v1.0.3-beta.1/speedway_1.0.3-beta.1_linux_amd64.tar.gz"
-      sha256 "16588ff499291970d1e37b96499a82deb6e3e0d0492cc4fc9e83bf3c43d57f7e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sonr-io/speedway/releases/download/v1.1.2/speedway_1.1.2_linux_arm64.tar.gz"
+      sha256 "3c3594e0d53b9f03cb37275e57e54d89a72fb460fb23155262b4909c3b4be9a2"
 
       def install
         bin.install "speedway"
