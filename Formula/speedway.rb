@@ -5,20 +5,20 @@
 class Speedway < Formula
   desc ""
   homepage ""
-  version "1.1.2"
+  version "1.1.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sonr-io/speedway/releases/download/v1.1.2/speedway_1.1.2_darwin_amd64.tar.gz"
-      sha256 "0cb3f54e33406efd5030043a0756bb157c4fc1d1e660aba03e4f48f7424bbfdd"
+    if Hardware::CPU.arm?
+      url "https://github.com/sonr-io/speedway/releases/download/v1.1.3/speedway_1.1.3_darwin_arm64.tar.gz"
+      sha256 "12e16265d836ba1ece5e9d142cd198482e54f81f4e5509dcd17a022232293f6a"
 
       def install
         bin.install "speedway"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/sonr-io/speedway/releases/download/v1.1.2/speedway_1.1.2_darwin_arm64.tar.gz"
-      sha256 "a25c3877d23419eb7b0674cc109458a8bb7318cc6c3c8886cef548864822b4b9"
+    if Hardware::CPU.intel?
+      url "https://github.com/sonr-io/speedway/releases/download/v1.1.3/speedway_1.1.3_darwin_amd64.tar.gz"
+      sha256 "0af5c72835c8d63da8aeeb9a586af796ab67ab2b1750cc51b4b3003e17e6e3e1"
 
       def install
         bin.install "speedway"
@@ -28,16 +28,16 @@ class Speedway < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sonr-io/speedway/releases/download/v1.1.2/speedway_1.1.2_linux_amd64.tar.gz"
-      sha256 "998e11e508cb55d12b6733f6cc09defac2acc37b5f82f6e80a18b1798231ded1"
+      url "https://github.com/sonr-io/speedway/releases/download/v1.1.3/speedway_1.1.3_linux_amd64.tar.gz"
+      sha256 "2049070b1f0612a735c99dd92955b499e2a8f8db7d32b747eab9e82570dd2046"
 
       def install
         bin.install "speedway"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sonr-io/speedway/releases/download/v1.1.2/speedway_1.1.2_linux_arm64.tar.gz"
-      sha256 "3c3594e0d53b9f03cb37275e57e54d89a72fb460fb23155262b4909c3b4be9a2"
+      url "https://github.com/sonr-io/speedway/releases/download/v1.1.3/speedway_1.1.3_linux_arm64.tar.gz"
+      sha256 "8048739102bb58b9052022f98b0e3497401a9723fa371d9ae987202df3e6b74b"
 
       def install
         bin.install "speedway"
